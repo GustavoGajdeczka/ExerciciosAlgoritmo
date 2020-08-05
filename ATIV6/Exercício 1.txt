@@ -1,12 +1,15 @@
 prog ex1
-     int id, nMagro, nGordo, cond;
-     real peso, magro, gordo;
+     int id, nMagro, nMagro2, nGordo2, nGordo, cond;
+     real peso, magro, magro2, gordo2, gordo;
      imprima "=== Algoritmo 334 ===\n";
      id <- 1;
      cond <- 1;
+     nMagro <- 0;
+     nGordo <- 0;
      magro <- 9999.0;
+     magro2 <- magro;
      gordo <- 0.0;
-     
+     gordo2 <- gordo;
      faca {
               imprima "=== Frigorifico Gajdeczka ===\n";
               imprima " ID do gado:   ";
@@ -16,19 +19,27 @@ prog ex1
               } senao {
                   imprima " Peso do gado: ";
                   leia peso;
-                  
                   se (peso <= magro) {
+                     magro2 <- magro; 
+                     nMagro2 <- nMagro;
                      magro <- peso;
-                     nMagro <- id;
-                  }
-                  
+                     nMagro <- id;  
+                  } se (peso <= magro2 && magro < peso){
+                    magro2 <- peso;
+                  }        
                   se (peso >= gordo) {
+                     gordo2 <- gordo;
+                     nGordo2 <- nGordo;
                      gordo <- peso;
                      nGordo <- id;
+                  } se (peso >= gordo2 && gordo > peso){
+                    gordo2 <- peso;
                   }
               }
      }   enquanto ( cond >= 0 )
-     
-     imprima "\n== O boi ", nGordo, " e o mais gordo, pesando ", gordo, "Kilos \n";
-     imprima "== O boi ", nMagro, " e o mais magro, pesando ", magro, "Kilos \n";
+     imprima "\n= ID do boi magrinho: ", nMagro, "\n= peso: ", magro, " \n";
+     imprima "\n= ID do boi magro   : ", nMagro2, "\n= peso: ", magro2, " \n";
+     imprima "\n= ID do boi gordo: ", nGordo2, "\n= peso: ", gordo2, " \n";
+     imprima "\n= ID do boi gordao: ", nGordo, "\n= peso: ", gordo, " \n";
+     imprima "\n\n\n\n\n\n\n== Magrinho - mais magro\n== Magro    - segundo mais magro\n== Gordao   - mais gordo\n== Gordo    - segundo mais gordo\n";
 fimprog

@@ -1,0 +1,34 @@
+prog extra
+     string ope;
+     real calc, ope1, ope2;
+     ope <- "calc"; 
+     calc <- 0.0;
+     imprima "=== Algoritmo Extra ===\n";
+     imprima "============ Calculadora Gajdeczka ============\n";
+     faca {
+          imprima "== Insira uma letra para realizar uma operacao ==\n";
+          imprima "- A : Adicao\n- S : Subtracao\n- D : Divisao\n- E : Encerrar\n";
+          imprima "== Operacao: ";
+          leia ope;
+          se (ope <> "a" && ope <> "s" && ope <> "d" && ope <> "e") {
+             imprima "== OPERACAO INVALIDA!!! ==\n\n";
+          }
+          se (ope <> "e"){
+              imprima "Digite o primeiro operador: ";
+              leia ope1;
+              imprima "Digite o segundo operador:  ";
+              leia ope2;
+              
+              se (ope == "a") {
+                 calc <- ope1 + ope2; 
+              }
+              se (ope == "s") {
+                 calc <- ope1 - ope2;
+              }
+              se (ope == "d") {
+                 calc <- ope1 * ope2; 
+              }
+              imprima "Resultado: ", calc, "\n\n";
+          }
+     } enquanto (ope <> "e")
+fimprog
