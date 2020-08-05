@@ -1,0 +1,34 @@
+prog ex1
+     int id, nMagro, nGordo, cond;
+     real peso, magro, gordo;
+     imprima "=== Algoritmo 334 ===\n";
+     id <- 1;
+     cond <- 1;
+     magro <- 9999.0;
+     gordo <- 0.0;
+     
+     faca {
+              imprima "=== Frigorifico Gajdeczka ===\n";
+              imprima " ID do gado:   ";
+              leia id;
+              se (id <= 0) {
+                 cond <- -5;
+              } senao {
+                  imprima " Peso do gado: ";
+                  leia peso;
+                  
+                  se (peso <= magro) {
+                     magro <- peso;
+                     nMagro <- id;
+                  }
+                  
+                  se (peso >= gordo) {
+                     gordo <- peso;
+                     nGordo <- id;
+                  }
+              }
+     }   enquanto ( cond >= 0 )
+     
+     imprima "\n== O boi ", nGordo, " e o mais gordo, pesando ", gordo, "Kilos \n";
+     imprima "== O boi ", nMagro, " e o mais magro, pesando ", magro, "Kilos \n";
+fimprog
