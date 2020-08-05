@@ -1,0 +1,37 @@
+prog ex2
+     int sexo, olho, cabelo, idade, velho, cond, cont;
+     real porcem;
+     porcem <- 0.0; 
+     velho <- 0;
+     cont <- 1;
+     imprima "=== Algoritmo 335 ===\n";
+     imprima "=== Municipio de Pelotas ===\n";
+     faca {
+          imprima "======= Pesquisa N", cont, " =======\n";
+          imprima "== 0 - Homem ==\n== 1 - Mulher ==\n";
+          imprima "- Digite o seu sexo:          ";
+          leia sexo;
+          cond <- sexo;
+          se (cond == 1 || cond == 0){
+                imprima "- Digite a sua idade:         ";
+                leia idade;   
+                imprima "== 0 - preto ==\n== 1 - Loiro ==\n== 2 - Ruivo ==\n";
+                imprima "- Digite a cor do seu cabelo: ";
+                leia cabelo;
+                imprima "== 0 - Azul ==\n== 1 - verde ==\n== 2 - castanho ==\n";
+                imprima "- Digite a cor do seu olho :  ";
+                leia olho;
+                se (sexo == 1 && idade >= 18 && idade <= 35 && cabelo == 1 && olho == 0) {
+                   porcem <- porcem + 1.0;
+                }
+                se (idade > velho) {
+                   velho <- idade;
+                }
+          cont++;
+          }
+     } enquanto (cond == 0 || cond == 1)
+     
+     porcem <- (100 / (cont - 1)) * porcem;
+     imprima "\n== A pessoa mais velha da pesquisa tem ", velho, " anos\n"; 
+     imprima "a porcentagem de mulheres arianas entre 18 e 35 e de : ", porcem, " porcento \n"; 
+fimprog
