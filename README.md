@@ -1,3 +1,3 @@
 # Exercicios de Algoritmo
 
-<h1>Falar é fácil, me mostre o código. <h1>
+<h2>Falar é fácil, me mostre o código. <h2>
