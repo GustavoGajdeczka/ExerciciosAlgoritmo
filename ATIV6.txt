@@ -7,7 +7,10 @@ Exercício 1
 
 Algoritmo 334 (modificado)
 
-Num frigorífico existem vários bois. Cada boi traz preso no seu pescoço um cartão contendo um número de identificação e seu peso. Implementar um algoritmo que escreva o número e o peso dos DOIS boi mais gordos e dos DOIS boi mais magros. O algoritmo acaba quando se digita um número menor ou igual a zero para identificação.
+Num frigorífico existem vários bois. Cada boi traz preso no seu pescoço um cartão contendo um 
+número de identificação e seu peso. Implementar um algoritmo que escreva o número e o peso dos 
+DOIS boi mais gordos e dos DOIS boi mais magros. O algoritmo acaba quando se digita um número 
+menor ou igual a zero para identificação.
 
 
 ===============================================================================
@@ -16,7 +19,8 @@ Exercício 2
 
 Algoritmo 335
 
-A prefeitura de Pelotas resolveu fazer uma pesquisa sobre algumas características físicas de sua população e coletou os seguintes dados, referentes a cada habitante, para serem analisados:
+A prefeitura de Pelotas resolveu fazer uma pesquisa sobre algumas características físicas de sua 
+população e coletou os seguintes dados, referentes a cada habitante, para serem analisados:
 
   - Sexo (masculino, feminino);
 
