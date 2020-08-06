@@ -1,0 +1,50 @@
+prog ex1
+     int cont, homem, mulher, sexo;
+     real altura, alturaMulher, mediaMulher, alto, baixo, media, porcentagem;
+     alto <- 0.0;
+     baixo <- 3.0;
+     alturaMulher <- 0.0;
+     homem <- 0;
+     mulher <- 0;
+     media <- 0.0;
+     
+     imprima "=== Algoritmo 1 ===\n";
+     
+     para (cont<-0; cont <= 50; cont++)
+     {
+          imprima "Digite a sua altura: ";
+          leia altura;
+          imprima "============\n";
+          imprima "=== 0 - masc ===\n=== 1 - fem ===\n";
+          imprima "digite o seu sexo: ";
+          leia sexo;
+          
+          se (sexo == 0) {
+             homem <- homem + 1;  
+             
+          }
+          se (sexo == 1) {
+             mulher <- mulher + 1;
+             alturaMulher <- alturaMulher + altura;
+          }
+          
+          se( altura > alto) {
+              alto <- altura;
+          }
+          se (altura < baixo) {
+             baixo <- altura;
+          }  
+          media <- media + altura;
+     }
+     
+     imprima "\no mais alto: ", alto;
+     imprima "\no mais baixo: ", baixo;
+     mediaMulher <- alturaMulher / mulher;
+     imprima "\na media da altura das mulher e de: ", mediaMulher;
+     media <- media / 50;
+     imprima "\na media da populacao e de: ", media;
+     porcentagem <- 2.0 * homem;
+     imprima "\na porcentagem de homens e de: ", porcentagem;
+     imprima "\n";
+     
+fimprog

@@ -1,0 +1,45 @@
+Laboratório - ENQUANTO
+
+
+Exercício 1
+
+Algoritmo 276
+
+Entrar com a idade e sexo de várias pessoas e imprimir:
+
+  - total de pessoas com menos de 21 anos
+
+  - total de pessoas com mais de 50 anos.
+
+  - percentual de pessoas do sexo feminino, entre 21 e 30 anos.
+
+
+
+===============================================================================
+
+
+Exercício 2
+
+Algoritmo 283
+
+Uma agência de uma cidade do interior tem, no máximo, 1000 clientes. 
+Criar um algoritmo que possa entrar com o número da conta, nome e saldo de cada cliente. 
+Imprimir todas as contas, os respectivos saldos e uma das mensagens: positivo/negativo. 
+A digitação acaba quando se digita -999 para número da conta ou quando chegar a 1000. 
+Ao final, devera sair  o total de clientes com saldo negativo, o total de clientes da agência e o saldo da agência.
+
+
+
+
+===============================================================================
+
+EXTRA
+
+
+
+Algoritmo 334
+
+Num frigorífico existem vários bois. Cada boi traz preso no seu pescoço um 
+cartão contendo um número de identificação e seu peso. Implementar um 
+algoritmo que escreva o número e o peso do boi mais gordo e do boi mais magro. 
+O algoritmo acaba quando se digita um número menor ou igual a zero para identificação.

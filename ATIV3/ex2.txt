@@ -1,0 +1,33 @@
+prog ex2
+     int turma, alunos, aluno, contagem, bomAluno;
+     real nota, media;
+     bomAluno <- 0;
+     media <- 0.0;
+     aluno <- 0;
+     
+     imprima "=== Algoritmo 2 ===\n";
+     
+     para (turma <-1; turma <= 2; turma++) {
+          bomAluno <- 0;
+          imprima " == turma ", turma;
+          imprima " ==\n"; 
+          imprima "digite a quantidade de alunos na turma: ";
+          leia alunos;  
+          para (contagem <- 1; contagem <= alunos; contagem++){
+                imprima "\nDigite a sua nota: ";
+                leia nota;
+                se (nota >= 7.0) {
+                   bomAluno <- bomAluno + 1;   
+                }
+                media <- media + nota;  
+          }
+          aluno <- aluno + alunos;
+          imprima "\nA quantidade de bons alunos nessa turma e de: ", bomAluno;
+          imprima "\n";
+     }
+     
+     media <- media / aluno;
+     imprima "a media da escola e: ", media;
+     imprima "\n"; 
+     
+fimprog

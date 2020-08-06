@@ -1,0 +1,13 @@
+prog ex3
+   int numero, cont, cont2;
+	
+	imprima "=== Algoritmo 3 ===\n";
+	
+	para (cont <- 1; cont <= 10; cont++){
+		imprima "=== Tabuada do ", cont, " ===\n";
+		para(cont2 <- 0; cont2 <= 10; cont2++){
+			numero <- cont * cont2;
+      imprima cont, " x ", cont2, " : ", numero, "\n";
+		}
+	}
+fimprog
