@@ -1,0 +1,62 @@
+Laboratório - Todos exercícios usarão pelo menos DUAS estruturas de repetição diferentes. 
+
+
+Exercício 1 - Usar Faça ... Enquanto para não aceitar numeros negativos e Enquanto para encerrar o algoritmo.
+
+
+Faça um algoritmo que calcule o salário e o imposto de renda de um grupo de pessoas, considerando:
+a) Para cada pessoa tem-se: Nome, Número de Dependentes, Renda Bruta Anual;
+
+b) O imposto é calculado segundo a tabela abaixo:
+
+  Renda Liquida  %
+
+  até R$ 10.000,00  isento
+
+  > R$ 10.000,00 até R$ 30.000,00  5%
+
+  > R$ 30.000,00 até R$ 60.000,00   10%
+
+  > R$ 60.000,00  15%
+
+  > não aceitar valores negativos.
+
+c) Há um desconto de R$ 600,00 para cada dependente.
+
+d) Sendo que a renda liquida é igual a renda bruta menos o abatimento de cada dependente.
+
+e) O algoritmo encerra ao se digitar "FIM" para nome.
+
+
+===============================================================================
+
+Exercício 2 - Usar Faça ... Enquanto para ler um número entre 1 e 10, Enquanto para encerrar o algoritmo e PARA na Tabuada.
+
+Faça um programa para ler um numero entre 1 e 10 apenas, mostrar a tabuada deste numero. 
+O programa se encerra quando se digitar "FIM"; 
+e deve apresentar uma mensagem de término do programa.
+===============================================================================
+EXTRA - Use pelo menos um Enquanto e um Faça ... Enquanto
+MELHORE a calculadora:
+MENU:
+
+A.dição
+
+S.ubração
+
+M.ultiplicação
+
+D.ivisão
+
+R.aiz (de um número)
+
+Q.uadrado (de um número)
+
+E.ncerrar
+Com as opções acima. 
+
+Após a escolha de uma das operações (A, S, M, D, R e Q), solicitar a entrada de dados e mostrar o respectivo resultado.
+
+Observações: não aceitar número negativo na R.aiz mostrando mensagem adequada quando o usuário tentar; 
+
+não aceitar 0 como entrada no divisor na D.ivisão mostrando mensagem adequada quando o usuário tentar. 
