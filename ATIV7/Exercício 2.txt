@@ -1,0 +1,26 @@
+prog ex2
+     int op1, op2, multi, cond;
+     cond <- 1;
+     imprima "=== Exercicio 2 ===\n";
+     faca {
+          enquanto (cond <> 0){
+                   imprima "### Tabuada ###\n";
+                   imprima "### numeros validos entre 1 e 10 ###\n";
+                   imprima "# Digite um numero: ";
+                   leia op1;
+                   se (op1 <= 10 && op1 >= 1){
+                      para(op2 <- 0; op2 <= 10; op2++){
+                              multi <- op1 * op2;
+                              imprima "= ", op1, " x ", op2, " = ", multi, " \n";
+                      }
+                      imprima "$$$ deseja continuar: \n[0 para o programa] ";
+                      leia cond;
+                   } senao {
+                      imprima "!!! Voce digitou um numero invalido !!!\n";
+                   }
+          }
+          op1 <- 11;
+     } enquanto (op1 >= 1 && op1 <= 10)
+     
+     imprima "\nParabens, o algoritmo chegou ao fim!!!\n";
+fimprog
