@@ -1,0 +1,45 @@
+prog ex1
+     string nome;
+     real rendaBrutaAnual, rendaLiquida, nDependentes;
+     logico fim;
+     fim <- falso;
+     imprima "=== Exercicio 1 ===\n";
+     rendaLiquida <- -1.0;
+     
+     enquanto (fim == falso){
+         faca {
+             imprima "== Programa VAMOS ACERTAR AS CONTAS ==\n";
+             imprima "= Digite seu nome: ";
+             leia nome;
+             se (nome == "fim"){
+                      fim <- verdadeiro;    
+             } senao {
+                imprima "= Digite seu numero de dependentes: ";
+                      leia nDependentes;
+                      imprima "= Digite a sua renda bruta: ";
+                      leia rendaBrutaAnual;
+                      se (rendaBrutaAnual <= 0.0){
+                          imprima "==!!== Numero Negativos nao sao aceitos ==!!==\n";
+                      } senao {
+                          nDependentes <- nDependentes * 600.0;
+                          rendaLiquida <- rendaBrutaAnual - nDependentes;
+    
+                          se (rendaLiquida > 10000.0 || rendaLiquida <= 30000.0){
+                             rendaLiquida <- rendaLiquida / 1.05;
+                          }
+                          se (rendaLiquida > 30000.0 || rendaLiquida <= 60000.0){
+                             rendaLiquida <- rendaLiquida / 1.1;
+                          }
+                          se (rendaLiquida > 60000.0){
+                             rendaLiquida <- rendaLiquida / 1.15;
+                          }
+                          imprima "##############################################\n";
+                          imprima "##== Usuario: ", nome, "\n";
+                          imprima "##== Numero de dependenes: ", nDependentes, "\n";
+                          imprima "##== RBA : ", rendaBrutaAnual, "\n##== Renda Liquida: ", rendaLiquida, "\n";
+                          imprima "##############################################\n";
+                      }   
+             }
+         } enquanto(rendaLiquida >= 0.0 && !nome == "fim")
+     }
+fimprog
