@@ -1,0 +1,60 @@
+prog extra
+     string ope;
+     int continua;
+     real calc, ope1, ope2;
+     ope <- "calc"; 
+     calc <- 0.0;
+     continua <- 1;
+     
+     imprima "=== Algoritmo Extra ===\n";
+     imprima "################# Calculadora Gajdeczka #################\n";
+     faca {
+          imprima "@@ Insira uma letra para realizar uma operacao @@\n";
+          imprima "- A : Adicao\n- S : Subtracao\n- D : Divisao\n- M : Multiplicacao \n- R : raiz\n- Q : Quadrado \n- E : Encerrar\n";
+          imprima "== Operacao: ";
+          leia ope;
+          se (ope <> "a" && ope <> "s" && ope <> "d" && ope <> "m" && ope <> "e" && ope <> "r" && ope <> "q") {
+             imprima "== OPERACAO INVALIDA!!! ==\n\n";
+          }
+          se (ope <> "e"){
+              enquanto (continua <> 0){
+                      imprima "Digite o primeiro operador: ";
+                      leia ope1;
+                      se (ope <> "r" && ope <> "q"){
+                          imprima "Digite o segundo operador:  ";
+                          leia ope2;
+                      }
+                      se (ope == "a") {
+                         calc <- ope1 + ope2; 
+                      }
+                      se (ope == "s") {
+                         calc <- ope1 - ope2;
+                      }
+                      se (ope == "d") {
+                         se (ope1 <= 0.0 || ope2 <= 0.0){
+                                  imprima "!!! Numero invalido !!!\n";
+                         }senao{
+                                  calc <- ope1 / ope2; 
+                         }
+                      }
+                      se (ope == "m") {
+                         calc <- ope1 * ope2;
+                      }
+                      se (ope == "q") {
+                         calc <- ope1 * ope1;
+                      }
+                      se (ope == "r") {
+                         se (ope1 < 0.0){
+                                  imprima "!!! Numero invalido !!!\n";
+                         }senao{
+                                  calc <- raiz(ope1);
+                         }
+                      }
+                      imprima "Resultado: ", calc, "\n\n";          
+                      imprima "Deseja continuar realizando a mesma operacao: \n";
+                      imprima "0 = nao ";
+                      leia continua;
+              }
+          }
+     } enquanto (ope <> "e")
+fimprog
