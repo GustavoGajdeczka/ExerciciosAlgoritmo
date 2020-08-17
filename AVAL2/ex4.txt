@@ -1,0 +1,57 @@
+prog ex4
+   
+   int sexo, matricula, media, melhorMa, continua, alunos;
+   string aluno, melhorSe, melhorAlu;
+   real meSe, melhor_ceplan, melhor, porcenta;
+   meCe <- 0.0;
+   meSe <- 0.0;
+   melhor <- 0.0;
+   media <- 0;
+   continua <- 1;
+   alunos <- 0;
+   
+   enquanto (continua <> 0) {
+   
+            imprima "=== CEPLAN ===\n";
+            imprima "= Digite o seu nome: ";
+            leia aluno;
+            
+            imprima "= Digite a sua matricula: ";
+            leia matricula;
+            
+            imprima "== 1 - Masculino ==\n== 0 - feminino ==\n";
+            imprima "= Digite o seu sexo: ";
+            leia sexo;
+            se (sexo == 0){
+               media++;
+            }
+            
+            imprima "= Digite a sua media semestral: ";
+            leia meSe;
+            
+            
+            se (melhor < meSe){
+               melhor <- meSe;
+               melhorAlu <- aluno;
+               melhorMa <- matricula;
+               se (sexo == 1){
+                  melhorSe <- "Masculino";
+               } senao {
+                 melhorSe <- "Feminino";
+               }
+            }
+            
+            meCe <- meCe + meSe;
+            alunos++;
+            
+            imprima "= 0 - não \n= 1 - sim\n";
+            imprima "= Deseja continuar: ";
+            leia continua;
+   }
+   meCe <- meCe / alunos;
+   porcenta <- (100 / alunos) * media;
+   imprima "ALUNO: ", melhorAlu ," MATRICULA: ", melhorMa, " MEDIA: ", melhor, " SEXO: ", melhorSe, "\n"; 
+   imprima "= Media do CEPLAN: ", meCe, "\n";
+   imprima "= Porcentagem de mulher na faculdade: ", porcenta, "\n";
+   
+fimprog

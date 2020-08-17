@@ -1,0 +1,9 @@
+prog ex2
+    int x;
+    x <- 10;
+    faca {
+         imprima "\n", x;
+         x--;
+    }enquanto (x > 0)
+    imprima "\n";
+fimprog

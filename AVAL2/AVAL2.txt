@@ -1,0 +1,115 @@
+1)
+X Y I J
+0 ? ? ?
+0 2 ? ?
+0 2 1 ?
+0 2 1 1
+0 2 1 2
+0 2 1 3
+1 2 2 1
+1 2 2 2 
+1 2 2 3
+1 2 3 1
+1 2 3 2
+1 2 3 3 
+1 2 4 1
+3 4 4 2
+3 4 4 3
+3 4 5 1
+3 4 5 2
+3 4 5 3
+3 4 6 1
+3 4 6 2
+6 6 6 3
+
+==========================================
+2)
+prog ex2
+    int x;
+    x <- 10;
+    faca {
+         imprima "\n", x;
+         x--;
+    }enquanto (x > 0)
+    imprima "\n";
+fimprog
+
+==========================================
+3)
+V  Y  X
+?  0  ?
+?  0  0
+6  0  0
+6  0  6
+6  6  6
+4  6  6
+3  6  6
+2  6  6
+1  6  6
+5  6  6
+0  6  6
+
+========================================== 
+
+4)
+prog ex4
+   
+   int sexo, matricula, media, melhorMa, continua, alunos;
+   string aluno, melhorSe, melhorAlu;
+   real meSe, melhor_ceplan, melhor, porcenta;
+   meCe <- 0.0;
+   meSe <- 0.0;
+   melhor <- 0.0;
+   media <- 0;
+   continua <- 1;
+   alunos <- 0;
+   
+   enquanto (continua <> 0) {
+   
+            imprima "=== CEPLAN ===\n";
+            imprima "= Digite o seu nome: ";
+            leia aluno;
+            
+            imprima "= Digite a sua matricula: ";
+            leia matricula;
+            
+            imprima "== 1 - Masculino ==\n== 0 - feminino ==\n";
+            imprima "= Digite o seu sexo: ";
+            leia sexo;
+            se (sexo == 0){
+               media++;
+            }
+            
+            imprima "= Digite a sua media semestral: ";
+            leia meSe;
+            
+            
+            se (melhor < meSe){
+               melhor <- meSe;
+               melhorAlu <- aluno;
+               melhorMa <- matricula;
+               se (sexo == 1){
+                  melhorSe <- "Masculino";
+               } senao {
+                 melhorSe <- "Feminino";
+               }
+            }
+            
+            meCe <- meCe + meSe;
+            alunos++;
+            
+            imprima "= 0 - não \n= 1 - sim\n";
+            imprima "= Deseja continuar: ";
+            leia continua;
+   }
+   meCe <- meCe / alunos;
+   porcenta <- (100 / alunos) * media;
+   imprima "ALUNO: ", melhorAlu ," MATRICULA: ", melhorMa, " MEDIA: ", melhor, " SEXO: ", melhorSe, "\n"; 
+   imprima "= Media do CEPLAN: ", meCe, "\n";
+   imprima "= Porcentagem de mulher na faculdade: ", porcenta, "\n";
+   
+fimprog
+
+==========================================  
+5)
+A
