@@ -1,0 +1,42 @@
+Exercício 1 
+
+
+Criar um algoritmo que leia os limites inferior e superior de um intervalo e imprima todos os números pares no intervalo aberto e seu somatório.
+
+Suponha que os números digitados são um intervalo crescente. Exemplo:
+
+ 
+
+Limite inferior: 3
+
+Limite superior: 12
+
+ 
+
+Saída: 4 6 8 10
+
+ 
+
+Soma: 28
+
+
+
+===============================================================================
+
+
+
+Exercício 2 
+
+
+
+Construa um algoritmo que receba um número inteiro e verifique se o mesmo é primo.
+
+===============================================================================
+
+EXTRA
+
+
+
+Construa um algoritmo que mostre os primeiros 20 números  da série de FIBONACCI.
+
+Exemplo: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,.
