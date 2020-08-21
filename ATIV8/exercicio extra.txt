@@ -1,0 +1,13 @@
+prog extra
+   int index, sequeAnte, fibonacci, sequeProx;
+   sequeAnte <- 0;
+   fibonacci <- 1;
+   
+   imprima "=== Sequencia Fibonacci ===\n";
+   
+   para (index <- 1; index <= 20; index++){
+        sequeAnte <- fibonacci - sequeAnte;
+        imprima "= Sequencia ", index, " = ", fibonacci, "\n";
+        fibonacci <- fibonacci + sequeAnte;   
+   }  
+fimprog
