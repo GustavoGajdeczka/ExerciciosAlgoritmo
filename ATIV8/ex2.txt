@@ -1,0 +1,26 @@
+prog ex2
+   int primo, continua, verifi, true;
+   continua <- 1;
+   imprima "=== Algoritmo Primo ===\n";
+   imprima "** Digite 0 para Fechar o programa **\n\n";
+   enquanto (continua <> 0){    
+      imprima "$$ Digite um numero para verificar se ele e primo: ";
+      leia primo;
+      se (primo > 0){
+         faca {
+            true <- 0;
+            para (verifi <- 2; verifi <= primo; verifi++){
+                  se (primo % verifi == 0){
+                     true++;
+                  } 
+            }
+            se (true == 1){
+               imprima "== ", primo, " e primo!! \n\n";
+            } senao {
+               imprima "== ", primo, " nao e primo!! \n\n";
+            }
+            true <- 1;
+         } enquanto (true <> 1)
+      } 
+   }  
+fimprog
