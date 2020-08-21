@@ -1,0 +1,28 @@
+prog ex1
+   int index, limiteI, limiteS, intervalo, cond, soma;
+   soma <- 0;
+   cond <- 1;
+   imprima "=== Programa Limites ===\n";
+   faca {
+         soma <- 0;
+         imprima "== Digite o limite inferior: ";
+         leia limiteI;
+         se (limiteI <> 0){
+            imprima "== Digite o limite superior: ";
+            leia limiteS;
+            se (limiteS <> 0){
+               para (index <- limiteI; index <= limiteS; index++){
+                  se (index % 2 == 0){
+                     soma <- soma + index;
+                     imprima "== Intervalo Par ", index, " ==\n";  
+                  }
+               }
+               imprima "== Soma: ", soma, "\n";
+            } senao {
+              cond <- 0;
+            }
+         } senao {
+           cond <- 0;
+         }
+   } enquanto (cond <> 0)
+fimprog
