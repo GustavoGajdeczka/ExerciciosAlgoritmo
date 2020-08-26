@@ -1,0 +1,48 @@
+Exercício 1 
+
+
+
+
+Faça um programa para ler dois vetores A e B com 10 elementos cada. Intercalar estes dois vetores formando o vetor C. Apresentar o vetor C gerado.
+Exemplo:
+A = 1, 2, 3, ... , 10
+B = 11, 22, 33, ... 1010
+C = 1, 11, 2, 22, 3, 33, ... , ... , 10, 1010
+
+
+
+===============================================================================
+
+
+
+Exercício 2 
+
+
+
+Criar um algoritmo que funcione através do menu a seguir:
+
+MENU
+
+1- Lê dez valores
+
+2- Mostra a soma dos valores digitados
+
+3- Mostra a media dos valores pares
+
+4- Mostra a quantidade de impares
+
+9- Termina o algoritmo
+
+OPÇÃO:
+
+
+
+===============================================================================
+
+EXTRA
+
+
+
+Criar um algoritmo que leia dados para um vetor de 30 elementos inteiros.
+
+Imprimir o maior e o menor valor .
