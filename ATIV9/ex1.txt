@@ -1,7 +1,7 @@
 prog ex1
     int a[11], b[11], c[21], index, indexC;
     indexC <- 1;
-    
+    imprima "// Exercicio 1 //\n";
     para (index <- 1; index <= 10; index++){
          imprima "== Digite o valor ", index, " de A: ";
          leia a[index];

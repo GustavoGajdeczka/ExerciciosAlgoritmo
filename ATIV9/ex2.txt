@@ -1,0 +1,51 @@
+prog ex2
+    int index, cond, num[11], digitado;
+    real soma;
+    cond <- 1;
+    index <- 0;
+    soma <- 0.0;
+    digitado <- 0;
+    enquanto (cond <> 9){
+        imprima "// Exercicio 2 //\n";
+        imprima "== 1 - le dez valores \n== 2 - Soma \n== 3 - media \n== 4 - impares \n== 9 - FIM \n";
+        leia cond;
+        se (cond <> 9){
+            se (cond == 1){
+                para (index <- 1; index <= 10; index++){
+                    imprima "## Digite o ", index, " numero: ";
+                    leia num[index];
+                }
+                   digitado <- 1;
+            }
+            se (digitado == 0){
+                imprima "!!! Voce ainda nao entrou com valores, tente novamente !!! \n";
+            } senao {
+                se (cond == 2){
+                    soma <- 0.0;
+                    para (index <- 1; index <= 10; index++){
+                        soma <- soma + num[index];    
+                    }
+                    imprima "## Soma = ", soma, "\n";
+                }
+                se (cond == 3){
+                    soma <- 0.0;
+                    para (index <- 1; index <= 10; index++){
+                        soma <- soma + num[index];    
+                    }
+                    soma <- soma / 10;
+                    imprima "## Media = ", soma, "\n";
+                }
+                se (cond == 4){
+                    soma <- 0.0;
+                    para (index <- 1; index <= 10; index++){
+                        se (num[index] % 2 == 1){
+                            soma <- soma + 1.0;
+                        }
+                    }
+                    imprima "## Impares = ", soma, "\n";
+                }
+            }
+                
+        } 
+    }
+fimprog
