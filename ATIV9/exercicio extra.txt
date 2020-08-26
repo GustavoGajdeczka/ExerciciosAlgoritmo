@@ -1,0 +1,18 @@
+prog extra
+    int a[31], index, maior, menor;
+    menor <- 999;
+    maior <- -999;
+
+    imprima "// Exercicio extra //\n";
+    para (index <- 1; index <= 30; index++){
+        imprima "== Digite o valor ", index, " da contagem: ";
+        leia a[index];  
+        se (a[index] > maior){
+        maior <- a[index];
+        } 
+        se (a[index] < menor){
+        menor <- a[index];
+        }
+    }
+    imprima "## Menor numero: ", menor, "\n## Maior numero: ", maior, "\n";
+fimprog
