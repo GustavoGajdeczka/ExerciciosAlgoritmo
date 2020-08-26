@@ -1,0 +1,19 @@
+prog ex1
+    int a[11], b[11], c[21], index, indexC;
+    indexC <- 1;
+    
+    para (index <- 1; index <= 10; index++){
+         imprima "== Digite o valor ", index, " de A: ";
+         leia a[index];
+         c[(index * 2) - 1] <- a[index];
+         imprima "== Digite o valor ", index, " de B: ";
+         leia b[index];
+         c[index * 2] <- b[index];
+    }
+    imprima "C = ";
+    imprima c[1];
+    para (indexC <- 1; indexC <= 19; indexC++){
+         imprima ", ", c[indexC + 1];
+    } 
+    imprima "\n";  
+fimprog
