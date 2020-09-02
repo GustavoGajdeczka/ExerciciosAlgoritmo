@@ -1,0 +1,14 @@
+Exercício 1
+Criar um algoritmo que leia dados para um vetor de 20 elementos inteiros.
+
+Imprimir o maior e o menor, 
+o percentual de números pares e, 
+a média dos elementos do vetor,
+imprimir o vetor ordenado em ordem crescente.
+
+===============================================================================
+Exercício 2 - Algoritmo 348 adaptado
+Criar um algoritmo que armazene o nome e duas notas de 5 alunos distintos.
+
+imprima uma listagem com os nomes em ordem Alfabetica, as duas notas e a média do aluno.
+imprima ao final as duas maiores medias, juntamente com os respectivos nomes destes alunos.
