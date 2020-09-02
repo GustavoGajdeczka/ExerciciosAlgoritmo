@@ -1,0 +1,39 @@
+prog sequencial
+    int index, tabela, dado, pos, vetor[30], achou;
+    # index = variavel que controla os "para"
+    # tabela = variavel responsavel pelo tamanho da tabela
+    # dado = dado a ser pesquisado
+    # pos = variavel onde sera guardado a posição do dado no vetor
+    # vetor = variavel do vetor
+    # achou = variavel que sera utilizada como condição caso for achado um valor
+    
+    imprima "\nInforme o tamanho do vetor: ";
+    leia tabela;
+    
+    imprima "\nInforme os dados do vetor: \n";
+    
+    para (index <- 0; index < tabela; index++){
+         leia vetor[index];
+    }
+    imprima "\Valores Informados: ";
+    
+    para (index <- 0; index < tabela; index++){
+         imprima vetor[index], " ";
+    }
+    
+    imprima "\nDigite um dado a ser pesquisado :";
+    leia dado;
+    achou <- 0;
+    para (index <- 0; (achou == 0) && (index <= tabela); index++){
+         se (vetor[index] == dado){
+            achou <- 1;
+            pos <- index;
+         }   
+    }
+    se (achou == 1){
+       imprima dado, " se encontra na posicao ", pos;
+    } senao {
+      imprima "dado nao encontrado na tabela!! ";
+    }
+    imprima "\n";
+fimprog

@@ -1,0 +1,33 @@
+prog ordem
+     int index, controle, tabela, aux, vetor[30];
+     
+     imprima "Digite o numero da Tabela: ";
+     leia tabela;
+     
+     imprima "\nInforme os dados da tabela: \n";
+     
+     para (index <- 0; index < tabela; index++){
+          leia vetor[index];
+     }
+     
+     imprima "\nValores Informados: ";
+     para (index <- 0; index < tabela; index++){
+          imprima vetor[index], " ";
+     }
+     
+     para (index <- 0; index < (tabela-1); index++){
+          para (controle <- (index+1); controle < tabela; controle++){
+               se (vetor[index] > vetor[controle]){
+                  aux <- vetor[index];
+                  vetor[index] <- vetor[controle];
+                  vetor[controle] <- aux;
+               }
+          }
+     }
+     imprima "\nValores Ordenados: ";
+     para (index <- 0; index < tabela; index++){
+          imprima vetor[index], " ";
+     }
+     imprima "\n";
+     
+fimprog
