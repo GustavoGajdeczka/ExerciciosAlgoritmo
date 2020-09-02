@@ -39,12 +39,12 @@ prog ex1
      para (index <- 0; index < 20; index++){
                para (index2 <- (index+1); index2 < 20; index2++){
                     se (vetor[index] > vetor[index2]){
-                    aux <- vetor[index];
-                    vetor[index] <- vetor[index2];
-                    vetor[index2] <- aux;
+                         aux <- vetor[index];
+                         vetor[index] <- vetor[index2];
+                         vetor[index2] <- aux;
                     }
                }
-          }
+     }
      imprima "#### Tabela #####\n";
      para (index <- 0; index < 5; index++){
           imprima "## ";

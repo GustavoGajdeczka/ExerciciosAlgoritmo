@@ -1,0 +1,58 @@
+prog ex2
+     int index, index2;
+     string vetor[5], aux, melhorAluno[2];
+     real nota[10], raux, raux2, media[5], melhorNota[2];
+     melhorNota[0] <- 0.0;
+     melhorNota[1] <- 0.0;
+     melhorAluno[0] <- "null";
+     melhorAluno[1] <- "null";
+     imprima "## Algoritmo Conselho de Classe ## \n";
+     para (index <- 0; index < 5; index++){
+          imprima "- Nome:  ";
+          leia vetor[index];
+          imprima "- Nota1: ";
+          leia nota[index];
+          imprima "- Nota2: ";
+          leia nota[index + 5];
+     }
+     
+     para (index <- 0; index < 5; index++){
+          para (index2 <- (index + 1); index2 < 5; index2++){
+               se (vetor[index] > vetor[index2]){
+                    aux <- vetor[index];
+                    vetor[index] <- vetor[index2];
+                    vetor[index2] <- aux;
+                    
+                    raux <- nota[index];
+                    nota[index] <- nota[index2];
+                    nota[index2] <- raux;
+                    
+                    raux2 <- nota[index + 5];
+                    nota[index + 5] <- nota[index2 + 5];
+                    nota[index2 + 5] <- raux2;    
+               }
+          }
+     } 
+     para (index <- 0; index < 5; index++){
+          media[index] <- (nota[index] + nota[index + 5]) / 2.0;
+          se (media[index] >= melhorNota[0]){
+             melhorNota[1] <- melhorNota[0];
+             melhorAluno[1] <- melhorAluno[0];
+             melhorNota[0] <- media[index];
+             melhorAluno[0] <- vetor[index];
+          } se (media[index] >= melhorNota[1] && melhorNota[0] > media[index]) {
+            melhorNota[1] <- media[index];
+          }
+     }
+     imprima "\n## Boletim ## \n";
+     para (index <- 0; index < 5; index++){
+          imprima "== Aluno: ", vetor[index], 
+                  "\n== Nota1: ", nota[index], 
+                  "\n== Nota2: ", nota[index + 5], 
+                  "\n== Media: ", media[index];
+          imprima "\n\n";
+     }
+     imprima "!!Melhores Alunos: \n";
+     imprima "= Aluno: ", melhorAluno[0], " nota: ", melhorNota[0], "\n";
+     imprima "= Aluno: ", melhorAluno[1], " nota: ", melhorNota[1], "\n";  
+fimprog
