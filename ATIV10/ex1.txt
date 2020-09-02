@@ -1,0 +1,57 @@
+prog ex1
+     int index, index2, aux, vetor[20], maior, menor, par, media;
+     real Media;
+     menor <- 99;
+     maior <- 0;
+     media <- 0;
+     par <- 0;
+     
+     imprima "==== Exercicio 1 ====\n\n";
+     
+     imprima "(para melhor vizualizacao, apenas insira numeros com 2 digitos)\n";
+     imprima "== Insira 20 valores na tabela:  \n";
+    
+     para (index <- 0; index < 20; index++){
+          leia vetor[index];
+     }
+     imprima "\n";
+    
+     para (index <- 0; index < 20; index++){
+          se (vetor[index] > maior){
+               maior <- vetor[index];
+          }  
+          se (vetor[index] < menor){
+               menor <- vetor[index];
+          }
+          se (vetor[index] % 2 == 0){
+               par++;   
+          }
+         media <- media + vetor[index];
+     }
+     par <- 5 * par;
+     Media <- media / 20;
+     imprima "\n";
+     imprima "#Menor dado:                 ", menor, "\n";
+     imprima "#Maior dado:                 ", maior, "\n";
+     imprima "#Porcentagem de dados pares: ", par, ".0%\n";
+     imprima "#Media dos dados:            ", Media, "\n\n";
+     
+     para (index <- 0; index < 20; index++){
+               para (index2 <- (index+1); index2 < 20; index2++){
+                    se (vetor[index] > vetor[index2]){
+                    aux <- vetor[index];
+                    vetor[index] <- vetor[index2];
+                    vetor[index2] <- aux;
+                    }
+               }
+          }
+     imprima "#### Tabela #####\n";
+     para (index <- 0; index < 5; index++){
+          imprima "## ";
+          para (index2 <- 0; index2 < 4; index2++){
+               imprima vetor[(index * 4) + index2], " ";     
+          }
+          imprima "## \n";
+     } 
+     imprima "#################\n";
+fimprog
