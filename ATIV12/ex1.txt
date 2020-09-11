@@ -1,0 +1,144 @@
+prog ex1 int index, index2, matri[5], maux, cond;
+     string vetor[5], aux, melhorAluno[2];
+     real nota[10], raux, media[5], melhorNota[2];
+     melhorNota[0] < -0.0;
+     melhorNota[1] < -0.0;
+     melhorAluno[0] < -"null";
+     melhorAluno[1] < -"null";
+     imprima "## Algoritmo Conselho de Classe ## \n";
+     para(index < -0; index < 5; index++)
+     {
+          imprima "## Aluno ", (index + 1), " ##\n";
+          imprima "- Nome:  ";
+          leia vetor[index];
+          imprima "- Matricula: ";
+          leia matri[index];
+          imprima "- Nota1: ";
+          leia nota[index];
+          imprima "- Nota2: ";
+          leia nota[index + 5];
+     }
+     para(index < -0; index < 5; index++)
+     {
+          media[index] < -(nota[index] + nota[index + 5]) / 2.0;
+          se(media[index] >= melhorNota[0])
+          {
+               melhorNota[1] < -melhorNota[0];
+               melhorAluno[1] < -melhorAluno[0];
+               melhorNota[0] < -media[index];
+               melhorAluno[0] < -vetor[index];
+          }
+          se(media[index] >= melhorNota[1] && melhorNota[0] > media[index])
+          {
+               melhorNota[1] < -media[index];
+               melhorAluno[1] < -vetor[index];
+          }
+     }
+     faca
+     {
+          imprima "\n";
+          imprima "###### Menu #####\n";
+          imprima "## 1 = Boletim ##\n";
+          imprima "## 2 = Lista dos alunos ##\n";
+          imprima "## 3 = Pesquise um aluno ##\n";
+          imprima "## 4 = Sair ##\n";
+          imprima "= Digite uma opcao: ";
+          leia cond;
+          imprima "\n \n";
+
+          se(cond == 1)
+          {
+               para(index < -0; index < 5; index++)
+               {
+                    para(index2 < -(index + 1); index2 < 5; index2++)
+                    {
+                         se(vetor[index] > vetor[index2])
+                         {
+                              aux < -vetor[index];
+                              vetor[index] < -vetor[index2];
+                              vetor[index2] < -aux;
+
+                              maux < -matri[index];
+                              matri[index] < -matri[index2];
+                              matri[index2] < -maux;
+
+                              raux < -nota[index];
+                              nota[index] < -nota[index2];
+                              nota[index2] < -raux;
+
+                              raux < -nota[index + 5];
+                              nota[index + 5] < -nota[index2 + 5];
+                              nota[index2 + 5] < -raux;
+
+                              raux < -media[index];
+                              media[index] < -media[index2];
+                              media[index2] < -raux;
+                         }
+                    }
+               }
+               imprima "\n## Boletim ## \n";
+               para(index < -0; index < 5; index++)
+               {
+                    imprima "== Aluno: ", vetor[index],
+                    "\n== Nota1: ", nota[index],
+                    "\n== Nota2: ", nota[index + 5],
+                    "\n== Media: ", media[index];
+                    imprima "\n\n";
+               }
+               imprima "!!Melhores Alunos: \n";
+               imprima "= Aluno: ", melhorAluno[0], " nota: ", melhorNota[0], "\n";
+               imprima "= Aluno: ", melhorAluno[1], " nota: ", melhorNota[1], "\n";
+          }
+          se(cond == 2)
+          {
+               para(index < -0; index < 5; index++)
+               {
+                    para(index2 < -(index + 1); index2 < 5; index2++)
+                    {
+                         se(vetor[index] > vetor[index2])
+                         {
+                              aux < -vetor[index];
+                              vetor[index] < -vetor[index2];
+                              vetor[index2] < -aux;
+
+                              maux < -matri[index];
+                              matri[index] < -matri[index2];
+                              matri[index2] < -maux;
+
+                              raux < -nota[index];
+                              nota[index] < -nota[index2];
+                              nota[index2] < -raux;
+
+                              raux < -nota[index + 5];
+                              nota[index + 5] < -nota[index2 + 5];
+                              nota[index2 + 5] < -raux;
+                         }
+                    }
+               }
+               imprima "## Alunos: \n";
+               para(index < -0; index < 5; index++)
+               {
+                    imprima "@ ", vetor[index], "\n";
+               }
+               imprima "\n";
+          }
+          se(cond == 3)
+          {
+               imprima "## Digite o nome do aluno que deseja procurar: ";
+               leia aux;
+
+               para(index < -0; index < 5; index++)
+               {
+                    se(vetor[index] == aux)
+                    {
+                         imprima "## Aluno: ", vetor[index], "\n";
+                         imprima "## Matricula: ", matri[index], "\n";
+                         imprima "## Nota1: ", nota[index], "\n";
+                         imprima "## Nota2: ", nota[index + 5], "\n";
+                         imprima "## Media: ", media[index], "\n";
+                    }
+               }
+          }
+     }
+     enquanto(cond<> 4)
+fimprog

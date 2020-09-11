@@ -1,0 +1,59 @@
+prog metodobinario
+
+ 
+
+    #//Declarações
+  int i /*variável de controle*/, N /*tamanho da tabela*/,
+          DADO /*elemento a ser procurado na tabela*/,
+          MEIO /*posição central tabela*/,
+          INIC /*posição inicial da busca*/,
+          FIM /*posição final da busca */, 
+      TAB [30] /*tabela para os elementos */,
+          ACHOU; /*valor lógico que representa o sucesso da busca*/
+
+ 
+
+     imprima "Digite o tamanho da tabela: ";
+  leia N;
+
+ 
+
+     imprima "\nInforme os dados da tabela: \n";
+     para (i <- 0; i < N; i++)
+    { leia TAB[i]; }
+        
+     imprima "\nValores Informados:";
+     para (i <- 0; i < N; i++)
+    { imprima TAB[i], " "; }
+ 
+  imprima"\nDigite o elemento a ser procurado: ";
+  leia DADO;
+  #//*****
+  ACHOU <- 0;    
+  INIC <- 0;    
+  FIM <- (N - 1);    
+  enquanto ((INIC <= FIM) && (ACHOU == 0)) 
+  {
+
+ 
+
+    MEIO <- realint ((INIC + FIM) / 2);        #//divisao de inteiro, resulta inteiro
+       se (TAB[MEIO] == DADO)
+        {ACHOU <- 1;}                    #// o elemento foi encontrado
+    senao 
+    {
+         se (TAB[MEIO] > DADO)
+          {FIM <- (MEIO - 1);}      #// ajusta fim do vetor
+      senao
+               {INIC <- (MEIO + 1); }  #// ajusta inicio do vetor
+    }
+  }
+  se (ACHOU == 1)
+  { imprima DADO , " foi encontrado. "; }
+  senao
+  { imprima DADO, " NAO se encontra na TABELA."; }
+  
+  
+  imprima "\n";
+  
+fimprog
