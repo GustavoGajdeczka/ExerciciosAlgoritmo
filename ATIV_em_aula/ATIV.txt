@@ -1,0 +1,19 @@
+SEMELHANTE ao Algoritmo 392
+Criar um algoritmo que implemente o seguinte menu de opções:
+- Ler notas e matriculas de 100 candidatos;
+- Exibir média geral de todos os candidatos;
+- Exibir uma lista com a matricula e a nota de todos os candidatos em ordem decrescente de nota;
+- Ler um matricula e buscar esse candidato imprimindo a matricula e sua nota; caso não seja encontrado candidato com a 
+matricula lida, imprimir a mensagem: “Candidato não encontrado”. Utilize Pesquisa BINARIA.
+
+ 
+
+
+Desafio 2
+
+ 
+
+Fazer o programa acima e ler além da matricula e nota, o nome do aluno.
+Implemente todas as funções do menu proposto no exercício anterior.
+Crie uma opção para definir quantos alunos farão parte da turma (QUANTIDADE de alunos para digitar nome, matricula e nota);
+Para fazer a pesquisa, utilize o nome do aluno.

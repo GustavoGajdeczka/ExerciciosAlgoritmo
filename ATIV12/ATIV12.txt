@@ -1,0 +1,96 @@
+Exercício 1
+
+
+Acrescente ao exercicio feito E CORRIGIDO em sala, as seguintes funcionalidades.
+
+- ler além da matricula e nota, o nome do aluno.
+
+- (nova opcao no menu) uma nova pesquisa, utilize o nome do aluno.
+
+- (nova opcao no menu) uma listagem de alunos por ordem alfabetica
+
+
+
+===============================================================
+
+
+
+Exercício 2
+
+
+
+
+Fazer um programa para que verifique se os elementos de um vetor  A  DIGITAD 
+
+pelo usuário estão em ordem crescente.
+
+Observação: você não pode alterar o a sequência de valores informados do vetor A.
+
+
+
+
+===============================================================
+
+
+
+
+Exercício 3
+
+
+
+
+Exercício 1 - Algoritmo 396 Adaptado
+
+Criar um algoritmo que entre com nome e a matrícula para as disciplinas de Programação I 
+
+e  que entre com nome e a matrícula para as disciplinas de Sistemas de Informação. 
+
+Cada disciplina tem 100 vagas. APÓS a entrada de dados, aparecerá o menu a seguir:
+
+
+
+MENU:
+
+1- Todos de Programação I
+
+2- Todos de Sistemas de Informação
+
+3- Todos que fazem as duas
+
+4- Todos de Sistema de Informação em ordem Alfabética
+
+5- Sair
+
+OPCAO:
+
+
+
+Segue o que fazer em cada opcao:
+
+1. Ao se digitar 1, sairão todos os nomes e respectivas matrículas.
+
+2. Ao se digitar 2, sairão todos os nomes e respectivas matrículas.
+
+3. Ao se digitar 3, sairão todos os nomes e respectivas matrículas.  A PESQUISA PELA MATRÍCULA.
+
+4. Ao se digitar 4, sairão todos os nomes e respectivas matrículas em ordem alfabética.
+
+5. Ao se digitar 5, aparecerá a mensagem: Programa encerrado.
+
+6. Qualquer outro número, aparecerá a mensagem: OPÇÃO INVÁLIDA.
+
+
+
+A PESQUISA é Binaria.
+
+
+
+===============================================================
+
+
+
+Extra
+
+
+Criar um algoritmo que leia dados para um vetor de 100 elementos inteiros.
+Imprimir os 5 maiores valores.
