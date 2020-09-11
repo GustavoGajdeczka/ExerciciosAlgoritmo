@@ -1,0 +1,24 @@
+prog ex2 
+     int index, aux, cond, vetor[50];
+     cond <- 0;
+     imprima "##[!max 50!] Digite o tamanho do vetor: ";
+     leia aux;
+     imprima "Digite os valores: \n";
+     para(index <- 0; index < aux; index++){
+          leia vetor[index];
+          vetor[index + 1] <- vetor[index] + 1;
+     }
+
+     para(index <- 0; index < aux; index++){
+          se(vetor[index] > vetor[index + 1]){
+               cond++;
+          }
+     }
+     se(cond > 0){
+          imprima "\n## o Vetor nao esta em ordem crescente";
+     }
+     senao{
+          imprima "\n## o Vetor esta em Ordem Crescente";
+     }
+     imprima "\n";
+fimprog
