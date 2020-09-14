@@ -1,0 +1,24 @@
+prog extra
+     int index, index2, aux, cond, vetor[100]; 
+     imprima " ### cem elementos ### \n";
+     
+     para (index <- 0; index < 6; index++){
+          imprima "== Digite o ", (index + 1), " valor: ";
+          leia vetor[index];
+     }
+     
+     para(index <- 0; index < 6; index++){
+         para(index2 <- 0; index2 < 6; index2++){
+              se (vetor[index] > vetor[index2]){
+                  aux <- vetor[index];
+                  vetor[index] <- vetor[index2];
+                  vetor[index2] <- aux;
+              }
+         }  
+     }
+     imprima "## Os cinco maiores elementos digitados sao: "; 
+     para(index <- 0; index < 5; index++){
+          imprima vetor[index], " ";
+     }
+     imprima "\n";
+fimprog
