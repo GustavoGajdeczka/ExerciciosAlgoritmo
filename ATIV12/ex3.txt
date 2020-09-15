@@ -1,0 +1,149 @@
+prog ex3
+     int index, index2, iaux, menu, cond, materia, matricula[200],
+     progAux, sisAux,
+     prog1[100], sis[100],
+     start, end, mid, achou, ambasAux;
+     
+     string aux, nome, 
+     nomeProg[100], nomeSis[100], ambas[100],
+     salva;
+     
+     progAux <- 0;
+     sisAux <- 0;
+     cond <- 1;
+     index <- 0;
+     achou <- 0;
+      
+     imprima " ## Algoritmo SISTEMAS ## \n";
+     
+     enquanto (cond == 1){
+          imprima "@@ Aluno: ", (index + 1), "\n";
+          imprima "Digite seu nome: ";
+          leia nome;
+          imprima "Digite sua matricula: ";
+          leia matricula[index];
+          imprima "\n";
+          imprima " ## Materias ##\n";
+          imprima " ## 1- Programacao I \n"; 
+          imprima " ## 2- Sistemas de Informacao \n";
+          imprima " ## 3- ambas \n";
+          imprima " ### informe quais materias voce faz (insira apenas o numero): ";  
+          leia materia;
+          se (materia == 1){
+              se (progAux < 100){
+                 nomeProg[progAux] <- nome;
+                 prog1[progAux] <- matricula[index];
+                 progAux++; 
+              }senao {
+                 imprima "\n!! Programacao I nao tem mais vagas!! \n";
+              }     
+          } 
+          se (materia == 2){
+               se (sisAux < 100){
+                  nomeSis[sisAux] <- nome;
+                  sis[sisAux] <- matricula[index];
+                  sisAux++;
+               } senao {
+                 imprima "\n!! Sistemas de Informacao nao tem mais vagas!! \n";
+               }   
+          } 
+          se (materia == 3){
+               se (progAux < 100){
+                 nomeProg[progAux] <- nome;
+                 prog1[progAux] <- matricula[index];
+                 progAux++; 
+              }senao {
+                 imprima "\n!! Programacao I nao tem mais vagas!! \n";
+              }
+               se (sisAux < 100){
+                  nomeSis[sisAux] <- nome;
+                  sis[sisAux] <- matricula[index];
+                  sisAux++;
+               } senao {
+                 imprima "\n!! Sistemas de Informacao nao tem mais vagas!! \n";
+               }
+          }  
+          imprima "## ", (100 - progAux), " vagas em Programacao I \n";
+          imprima "## ", (100 - sisAux), " vagas em Sistemas de Informacao \n";
+          imprima "!! Gostaria de salvar outro aluno(s/n): ";
+          leia  salva;
+          se (salva == "n"){
+               cond <- 0;
+          } 
+          index++;  
+     }         
+     faca{
+          imprima " ## MENU ##\n";
+          imprima " ## 1- Todos de Programacao I \n";
+          imprima " ## 2- Todos de Sistemas de Informacao \n";
+          imprima " ## 3- Todos que fazem as duas \n";
+          imprima " ## 4- Todos de Sistema de Informacao em ordem Alfabetica \n";
+          imprima " ## 5- Sair \n";
+          imprima " ## Digite uma Opcao: ";
+          leia menu; 
+          imprima "\n==============================================";
+          
+          se (menu == 1){
+             imprima "\n## Alunos Matriculados em Programacao I \n";
+             para(index <- 0; index < progAux; index++){
+                 imprima "#Nome: ", nomeProg[index], "\n";
+                 imprima "#Matricula: ", prog1[index], "\n"; 
+             }   
+          }
+          se (menu == 2){
+             imprima "\n## Alunos Matriculados em Sistemas de Informacao\n";
+             para(index <- 0; index < sisAux; index++){
+                 imprima "#Nome: ", nomeSis[index], "\n";
+                 imprima "#Matricula: ", sis[index], "\n"; 
+             }
+          }
+          se (menu == 3){
+               imprima "\n## Alunos Matriculados em Sistemas de Informacao e Programacao I \n";
+               para (index <- 0; index < progAux; index++){
+                    imprima "#Nome: ", nomeProg[index], "\n";
+                    imprima "#Matricula: ", prog1[index], "\n";             
+               }
+             
+               para (index <- 0; index < progAux; index++){
+                    para(index2 <- 0; index2 < sisAux; index2++){
+                         se (prog1[index] == sis[index2]){
+                              cond <- 2;   
+                         }
+                    }
+                    se (cond <> 2){
+                         imprima "#Nome: ", nomeSis[index], "\n";
+                         imprima "#Matricula: ", sis[index], "\n";
+                    }
+               }
+             
+          }
+          se (menu == 4){
+               para(index <- 0; index < sisAux; index++){
+                    para (index2 <- (index+1); index2 < sisAux; index2++){
+                         se(nomeSis[index] > nomeSis[index2]){
+                              aux <- nomeSis[index];
+                              nomeSis[index] <- nomeSis[index2];
+                              nomeSis[index2] <- aux;
+                              
+                              iaux <- sis[index];
+                              sis[index] <- sis[index2];
+                              sis[index2] <- iaux;
+                         }
+                    }
+               }
+               imprima "\n## Alunos Matriculados em Sistemas de Informacao (ABC)\n";
+               para (index <- 0; index < sisAux; index++){
+                    imprima "#Nome: ", nomeSis[index], "\n";
+                    imprima "#Matricula: ", sis[index], "\n"; 
+               }
+          }
+          cond <- 1;
+          se (menu == 5){
+             cond <- 0;
+          }
+          se (menu < 1 || menu > 5){
+             imprima "\n!! Opcao invalida !!\n";
+          }
+          imprima "==============================================\n";
+     } enquanto (cond == 1)   
+fimprog

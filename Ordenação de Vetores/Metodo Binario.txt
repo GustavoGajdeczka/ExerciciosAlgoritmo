@@ -1,59 +1,49 @@
 prog metodobinario
-
- 
-
-    #//Declarações
-  int i /*variável de controle*/, N /*tamanho da tabela*/,
-          DADO /*elemento a ser procurado na tabela*/,
-          MEIO /*posição central tabela*/,
-          INIC /*posição inicial da busca*/,
-          FIM /*posição final da busca */, 
-      TAB [30] /*tabela para os elementos */,
-          ACHOU; /*valor lógico que representa o sucesso da busca*/
-
- 
+     int index, num, dado,
+          meio /*posição central tabela*/,
+          start /*posição inicial da busca*/,
+          end /*posição final da busca */, 
+          vetor[30] /*tabela para os elementos */,
+          ACHOU; /*valor lógico que representa o sucesso da busca*/    
 
      imprima "Digite o tamanho da tabela: ";
-  leia N;
-
- 
+     leia num;
 
      imprima "\nInforme os dados da tabela: \n";
-     para (i <- 0; i < N; i++)
-    { leia TAB[i]; }
+     para (index <- 0; index < num; index++){ 
+          leia vetor[index]; 
+     }
         
      imprima "\nValores Informados:";
-     para (i <- 0; i < N; i++)
-    { imprima TAB[i], " "; }
+     para (index <- 0; index < num; index++){ 
+          imprima vetor[index], " ";
+     }
  
-  imprima"\nDigite o elemento a ser procurado: ";
-  leia DADO;
-  #//*****
-  ACHOU <- 0;    
-  INIC <- 0;    
-  FIM <- (N - 1);    
-  enquanto ((INIC <= FIM) && (ACHOU == 0)) 
-  {
-
- 
-
-    MEIO <- realint ((INIC + FIM) / 2);        #//divisao de inteiro, resulta inteiro
-       se (TAB[MEIO] == DADO)
-        {ACHOU <- 1;}                    #// o elemento foi encontrado
-    senao 
-    {
-         se (TAB[MEIO] > DADO)
-          {FIM <- (MEIO - 1);}      #// ajusta fim do vetor
-      senao
-               {INIC <- (MEIO + 1); }  #// ajusta inicio do vetor
-    }
-  }
-  se (ACHOU == 1)
-  { imprima DADO , " foi encontrado. "; }
-  senao
-  { imprima DADO, " NAO se encontra na TABELA."; }
-  
-  
-  imprima "\n";
+     imprima"\nDigite o elemento a ser procurado: ";
+     leia dado;
+     ACHOU <- 0;    
+     start <- 0;    
+     end <- (num - 1);    
+     enquanto ((start <= end) && (ACHOU == 0)) 
+     {
+          meio <- realint ((start + end) / 2);        #//divisao de inteiro, resulta inteiro
+          se (vetor[meio] == dado){
+               ACHOU <- 1;
+          }                    
+          senao{
+               se (vetor[meio] > dado){
+                    end <- (meio - 1);
+               }      #// ajusta fim do vetor
+               senao{
+                    start <- (meio + 1); 
+               }  #// ajusta inicio do vetor
+          }
+     }
+     se (ACHOU == 1){
+          imprima dado , " foi encontrado. "; 
+     }senao{ 
+          imprima dado, " NAO se encontra na TABELA."; 
+     }
+     imprima "\n";
   
 fimprog
