@@ -1,0 +1,14 @@
+prog gratificacao
+     real salario, gratifi, imposto;
+     imprima "== Gratificacao ==\n";
+     imprima "= Insira o seu salario: ";
+     leia salario;
+     gratifi <- salario * 1.05;
+     imposto <- gratifi / 1.07;
+     
+     imprima "# Salario com gratificacao: ", gratifi;
+     imprima "\n";
+     imprima "# Salario com imposto: ", imposto;
+     imprima "\n";
+     
+fimprog

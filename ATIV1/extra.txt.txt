@@ -1,0 +1,11 @@
+prog idade
+     int idade, ano, idade2;
+     imprima "== Idade ==\n";
+     imprima "= Insira a sua idade: ";
+     leia idade;
+     imprima "= Insira o ano atual: ";
+     leia ano;
+     
+     idade2 <- (2040 - ano) + idade;
+     imprima "# Em 2040 voce tera ", idade2, " anos \n";
+fimprog

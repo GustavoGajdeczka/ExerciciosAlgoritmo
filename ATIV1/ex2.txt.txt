@@ -1,0 +1,13 @@
+prog escada
+     real altura, degrau, subir;
+     
+     imprima "== Escada ==";
+     imprima "= altura do degrau: ";
+     leia degrau;
+     imprima "= qual altura voce deseja subir: ";
+     leia altura;
+     
+     subir <- altura / degrau;
+     
+     imprima "# voce tera de subir ", subir, " degraus\n"; 
+fimprog
