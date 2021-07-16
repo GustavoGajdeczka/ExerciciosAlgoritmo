@@ -1,0 +1,51 @@
+prog ex1
+     string nome, nomeAlto, nomeBaixo;
+     int sexo, homem, index;
+     real altura, alto, baixo, alturaMulher, alturaPovo;
+     alto <- 0.0;
+     homem <- 0;
+     baixo <- 999.99;
+     alturaMulher <- 0.0;
+     alturaPovo <- 0.0;
+     
+     para(index <- 0; index < 50; index++){
+                imprima "= Insira o seu Nome: ";
+                leia nome;
+                imprima "= 1 - Homem\n= 2 - Mulher\n";
+                imprima "= Insira o seu sexo: ";
+                leia sexo;
+                se (sexo <> 1 && sexo <> 2){
+                   imprima "!! Declaracao de genero invalida !!\n";
+                }
+                imprima "= Insira sua altura: ";
+                leia altura;
+                se (altura > alto){
+                   alto <- altura;
+                   nomeAlto <- nome;
+                }
+                se (altura < baixo){
+                   baixo <- altura;
+                   nomeBaixo <- nome;
+                }
+                se (sexo == 1){
+                   homem <- homem + 1;
+                }
+                se (sexo == 2){
+                   alturaMulher <- alturaMulher + altura;
+                }
+                alturaPovo <- alturaPovo + altura;
+     }
+     
+     imprima "\n# Mais Alto: ", nomeAlto, " com ", alto, " metros \n";
+     imprima "# Mais Baixo: ", nomeBaixo, " com ", baixo, " metros \n";
+     
+     alturaMulher <- alturaMulher / (50 - homem);
+     imprima "# Media de altura das mulheres: ", alturaMulher, "\n";
+     
+     alturaPovo <- alturaPovo / 50;
+     imprima "# Media de altura da populacao: ", alturaPovo, "\n";
+     
+     homem <- homem * 2;
+     imprima "# Porcentual de homems na populacao: ", homem, "\n";
+      
+fimprog

@@ -1,0 +1,12 @@
+prog fibonacci
+     int index, num, num2;
+     num <- 0;
+     num2 <- 1;
+     
+     para(index <- 0; index <= 10; index++){
+                num <- num + num2;
+                num2 <- num - num2;
+                imprima "Fibonacci ", index, ": ", num;
+                imprima "\n";
+     } 
+fimprog

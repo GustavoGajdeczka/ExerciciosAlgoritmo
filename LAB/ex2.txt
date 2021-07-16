@@ -1,0 +1,18 @@
+prog ex2
+     int num, num1, num2;
+     num <- 0;
+     num1 <- 1;
+     num2 <- 1;
+     
+     para(num1 <- 1; num1 <= 10; num1++){
+               para(num2 <- 1; num2 <= 10; num2++){
+                         se(num2 > num){
+                                 imprima num1, "-", num2, "  ";
+                         }senao{
+                                imprima "     ";
+                         }
+               }
+               num++;
+               imprima "\n";
+     }
+fimprog

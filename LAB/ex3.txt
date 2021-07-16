@@ -1,0 +1,20 @@
+prog ex3
+     int num, num1, num2, num3;
+     num <- 0;
+     num1 <- 1;
+     num2 <- 1;
+     num3 <- 2;
+     
+     para(num1 <- 1; num1 <= 10; num1++){
+               para(num2 <- 1; num2 <= 10; num2++){
+                         se(num2 > num && num2 < num3){
+                                 imprima num1, "-", num2, "  ";
+                         }senao{
+                                imprima "     ";
+                         }
+               }
+               num++;
+               num3++;
+               imprima "\n";
+     }
+fimprog
