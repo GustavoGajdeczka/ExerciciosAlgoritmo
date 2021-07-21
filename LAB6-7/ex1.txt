@@ -1,0 +1,26 @@
+prog ex1
+     real largura, comprimento, areaTotal;
+     string nome;
+     areaTotal <- 0.0;
+     nome <- "a";
+     
+     imprima "== Exercicio 1 ==\n";
+     enquanto(nome <> "nao"){
+             imprima "= Insira o nome do comodo: ";
+                   leia nome;
+                   se(nome <> "nao"){
+                           imprima "= Insira a largura do comodo: ";
+                           leia largura;
+                           
+                           imprima "= Insira o comprimento do comodo: ";
+                           leia comprimento;
+                           
+                           areaTotal <- areaTotal + (largura * comprimento);
+                           
+                           imprima "# a area de ", nome, " e de ", (largura * comprimento), " metros. \n";
+                           imprima "= deseja continuar: ";
+                           leia nome;
+                   }
+     }
+     imprima "## a area total da residencia e de: ", areaTotal, " metros.\n";                    
+fimprog

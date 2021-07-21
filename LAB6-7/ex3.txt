@@ -1,0 +1,19 @@
+prog ex3
+    int x, y, index;
+    string aux;
+    aux <- "inicia";
+    imprima "== Exercicio 3 - Tabuada ==\n";
+    
+    enquanto(aux <> "fim"){
+        imprima "= Insira um numero: ";
+        leia x;
+        imprima "== Tabuada do ", x, " ==\n";
+        para(index <- 0; index <= 10; index++){
+            y <- x * index;
+            imprima "= ", index, " X ", x, " = ", y, "\n";
+        }
+        imprima "= deseja continuar (FIM encerra): ";
+        leia aux;
+    }
+    imprima "programa executado com sucesso!!\n";
+fimprog

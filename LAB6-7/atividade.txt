@@ -1,0 +1,59 @@
+Exercício 1
+
+Elaborar um programa que possibilite calcular a área total de uma residência (sala, cozinha, banheiro, quartos, área de serviço, quintal, garagem, etc.). 
+O programa deve solicitar a entrada do nome, a largura e o comprimento de um determinado cômodo. 
+Em seguida, deve presentar a área do cômodo lido e também uma mensagem solicitando do usuário a confirmação de continuar calculando novos cômodos. 
+Caso o usuário responda "NAO", o programa deve apresentar o valor total acumulado da área residencial.
+
+Exercício 2
+
+Faça um algoritmo que leia dois valores reais e em seguida apresente o seguinte menu:
+
+******
+CALCULADORA
+******
++ para somar
+- para subtrair
+* para multiplicar
+/ para dividir
+@ para sair
+
+Digite opção:
+
+A solução deverá ler uma das opções, e mostrar mensagem "opção indisponível" caso o usuário não tenha digitado corretamente.
+Utilizar FACA...ENQUANTO.
+
+Exercício 3
+
+Faça um programa para ler um numero entre 1 e 10 apenas, mostrar a tabuada deste numero.
+O programa se encerra quando se digitar "FIM".
+O programa  deve também apresentar uma mensagem de término do programa.
+
+Exemplo:
+
+digite um numero: 10
+
+1 x 10 = 10
+2 x 10 = 20
+...
+10 x 10 = 100
+
+deseja continuar (FIM encerra) ? FIM
+
+programa executado com sucesso!!
+
+Utilizar PARA e ENQUANTO.
+
+Exercício 4
+
+Algoritmo 278
+
+Entrar com um numero e verificar se ela é um numero primo.
+
+Extra
+
+Algoritmo 274
+Criar um algoritmo que deixe entrar com 10 números positivos e imprima raiz
+quadrada de cada número. Para cada entrada de dados deverá haver um trecho
+de proteção para que um número negativo não seja aceito.
+Solução Livre.

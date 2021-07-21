@@ -1,0 +1,22 @@
+prog ex4
+    int x, y, index;
+    y <- 1;
+    imprima "== Exercicio 4 - Numero primo ==\n";
+    imprima "= Insira um numero: ";
+    leia x;
+    se (x % 2 == 0){
+        y <- 0;
+    }senao{
+        para(index <- 3; index < x; index++){
+            se (x % index == 0){
+                y <- 0;
+                x <- index - 1;
+            }
+        } 
+    }
+    se (y == 0){
+        imprima "## Esse nao e um numero primo!\n";
+    }senao{
+        imprima "## Esse e um numero primo!\n";
+    }       
+fimprog

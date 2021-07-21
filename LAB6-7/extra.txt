@@ -1,0 +1,15 @@
+prog extra
+    real x;
+    int index;
+    imprima "== Exercicio extra - Raiz ==\n";
+    para(index <- 0; index < 10; index++){
+        imprima "= Insira o ", (index+1), " numero: ";
+        leia x;
+        se (x < 0.0){
+            imprima "!! numeros negativos nao sao permitidos !!";
+            index <- index - 1;
+        }senao{
+            imprima "== A raiz quadrada de ", x, " e igual a ", raiz(x), "\n";
+        }    
+    }  
+fimprog

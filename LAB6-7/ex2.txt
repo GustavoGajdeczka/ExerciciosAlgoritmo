@@ -1,0 +1,45 @@
+prog ex2
+    real x, y, z;
+    string funcao;
+    
+    imprima "== Exercicio 2 ==\n";
+    imprima "= Insira o primeiro numero: ";
+    leia x;
+    imprima "= Insira o primeiro numero: ";
+    leia y;
+	
+    faca{
+      
+  	    imprima "******\n";
+  	    imprima "CALCULADORA\n";
+  	    imprima "******\n";
+  	    imprima "+ para somar\n";
+  	    imprima "- para subtrair\n";
+  	    imprima "* para multiplicar\n";
+  	    imprima "/ para dividir\n";
+  	    imprima "@ para sair\n";
+  	    imprima "= Digite uma dessas opcoes: ";
+  	    leia funcao;
+        
+        se (funcao == "+"){
+           z <- x + y;
+        }
+        se (funcao == "-"){
+           z <- x - y;
+        }
+        se (funcao == "*"){
+           z <- x * y;
+        }
+        se (funcao == "/"){
+           z <- x / y;
+        }
+      
+        se (funcao <>  "+" && funcao <>  "-" && funcao <>  "*" && funcao <>  "/" && funcao <>  "@"){
+           imprima "!! operacao invalida !!\n";
+        }senao{
+            se (funcao <> "@"){
+                imprima "## Resultado: ", z, "\n\n";
+            }
+        }
+    }enquanto(funcao <> "@")
+fimprog
