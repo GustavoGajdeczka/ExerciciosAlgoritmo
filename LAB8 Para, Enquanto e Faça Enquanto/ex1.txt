@@ -1,0 +1,60 @@
+prog ex1
+    real salario, mediaSalario, menorSalario;
+    int idade, maiorIdade, menorIdade, menorSalarioIdade, menorSalarioSexo, media, sexo, mulher, index;
+    index <- 1;
+    maiorIdade <- 0;
+    menorIdade <- 999;
+    mediaSalario <- 0.0;
+    menorSalario <- 9999999.9;
+    mulher <- 0;
+    
+    imprima "== Exercicio 1 ==\n";
+    
+    faca{
+       imprima "== Pesquisado numero", index, "==\n";
+    
+       imprima "= Insira a sua idade: ";
+       leia idade;
+       se (idade > 0){
+       
+          se (menorIdade > idade){
+             menorIdade <- idade;
+          }
+          se (maiorIdade < idade){
+             maiorIdade <- idade;
+          }
+    
+          imprima "= 0 - homem\n= 1 - mulher\n";
+          imprima "= Insira o seu sexo: ";
+          leia sexo;
+          se (sexo == 1){
+             mulher <- mulher + 1;
+          }
+    
+          imprima "= Insira o seu salario: ";
+          leia salario;
+          mediaSalario <- mediaSalario + salario;
+          se (menorSalario < salario){
+             menorSalarioIdade <- idade;
+             menorSalarioSexo <- sexo;
+          }
+          index <- index + 1;
+       }
+       
+    }enquanto(idade > 0)
+    mediaSalario <- mediaSalario / (index - 1);
+    
+    ## A
+    imprima "## A media salarial do grupo e de ", mediaSalario, " Reais.\n";
+    ## B
+    imprima "## A maior idade do grupo e de ", maiorIdade, " anos.\n";
+    imprima "## A menor idade do grupo e de ", menorIdade, " anos.\n";
+    ## C
+    imprima "## A Quantidade de mulheres no grupo e de ", mulher, ".\n";
+    ## D
+    se (menorSalarioSexo == 1){
+       imprima "## A pessoa com o salario mais baixo e do sexo feminino e tem ", menorSalarioIdade, " anos de idade.\n";  
+    }senao{
+       imprima "## A pessoa com o salario mais baixo e do sexo masculino e tem ", menorSalarioIdade, " anos de idade.\n";    
+    }
+fimprog
