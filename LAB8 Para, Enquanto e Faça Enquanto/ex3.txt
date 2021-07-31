@@ -1,0 +1,40 @@
+prog ex3
+    real salario, mediaSalario, maiorSalario, mediaFilhos, SalarioMinimo;
+    int quantidadeFilhos, Filhos, index, salarioMinimo;
+    mediaSalario <- 0.0;
+    maiorSalario <- 0.0;
+    Filhos <- 0;
+    salarioMinimo <- 0;
+    
+    imprima "== Exercicio 3 - Prefeitura de Krakatoa ==\n\n";
+    para(index <- 0; index < 200; index++){
+       imprima "= Insira o seu salario: ";
+       leia salario;
+       
+       mediaSalario <- mediaSalario + salario;
+       
+       se (maiorSalario < salario){
+          maiorSalario <- salario;
+       }
+       se (salario < 1100.0){
+          salarioMinimo <- salarioMinimo + 1;
+       }
+       
+       imprima "= Insira a quantidade de filhos: ";
+       leia quantidadeFilhos;
+       
+       Filhos <- Filhos + quantidadeFilhos;
+    }
+    
+    mediaSalario <- mediaSalario / 200.0;
+    imprima "## A media salarial da populacao e de R$", mediaSalario, ".\n";
+    
+    mediaFilhos <- Filhos / 200.0;
+    imprima "## A quantidade media de filhos da populacao e de ", mediaFilhos, ".\n"; 
+    
+    imprima "## O maior salario da populacao e de R$", maiorSalario, ".\n";
+    
+    SalarioMinimo <- salarioMinimo / 2.0;
+    imprima "## A porcentagem da populacao com ate um salario minimo e de ", SalarioMinimo, " porcento.\n";   
+
+fimprog

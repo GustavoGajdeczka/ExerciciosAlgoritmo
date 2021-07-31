@@ -4,6 +4,7 @@ prog extra
     chico <- 1.7;
     juca <- 1.1;
     index <- 0;
+    imprima "== Exercicio Extra ==\n";
     enquanto (chico >= juca){
              chico <- chico + 0.02;
              juca <- juca + 0.03;

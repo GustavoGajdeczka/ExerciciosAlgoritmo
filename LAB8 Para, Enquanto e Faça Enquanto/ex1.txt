@@ -11,7 +11,7 @@ prog ex1
     imprima "== Exercicio 1 ==\n";
     
     faca{
-       imprima "== Pesquisado numero", index, "==\n";
+       imprima "== Pesquisado numero ", index, "==\n";
     
        imprima "= Insira a sua idade: ";
        leia idade;

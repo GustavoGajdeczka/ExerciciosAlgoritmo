@@ -1,0 +1,34 @@
+prog ex2
+    real preco, valorTotalAVista, valorTotalAPrazo, valorTotal;
+    string codigo;
+    int index;
+    valorTotalAVista <- 0.0;
+    valorTotalAPrazo <- 0.0;
+    valorTotal <- 0.0;
+    imprima "== Exercicio 2 ==\n\n";
+    imprima "= Codigo de Compra =\n";
+    imprima "= V - compras a Vista\n";
+    imprima "= P - compras a Prazo\n\n";
+    para(index <- 0; index < 15; index++){
+       imprima "= Produto ", (index + 1), " ==\n";
+       
+       imprima "= Insira o Codigo da compra: ";
+       leia codigo;
+       
+       imprima "= Insira o valor da compra: ";
+       leia preco;
+       
+       se (codigo == "V" || codigo == "v"){
+          valorTotalAVista <- valorTotalAVista + preco;
+       }
+       se (codigo == "P" || codigo == "v"){
+          valorTotalAPrazo <- valorTotalAPrazo + preco;
+       }
+       valorTotal <- valorTotal + preco;
+    }
+    
+    imprima "## O valor total das compras a vista foi de R$", valorTotalAVista, ".\n";
+    imprima "## O valor total das compras a prazo foi de R$", valorTotalAPrazo, ".\n";
+    imprima "## O valor total das compras foi de R$", valorTotal, ".\n";
+
+fimprog
